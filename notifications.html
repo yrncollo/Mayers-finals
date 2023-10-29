@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
+</head>
+
+<body>
+    <div class="input">
+    <label for="Incident Name">Choose an Incident:</label> 
+    <select name="Incident Name" id="Incident Name"> 
+        <option value="Hacking">Hacking</option> 
+        <option value="Cyber stalking">Cyber stalking</option> 
+        <option value="Stolen Identity">Stolen Identity</option> 
+        <option value="Cyber bullying">Cyber bullying</option> 
+    </select></br>
+
+    <label for="Time it was reported">State the time it was reported:</label>
+    <input type="text" name="Time"></br>
+
+    <label for="Incident Reporter">Incident Reporter:</label>
+    <input type="text" name="Name"></br>
+
+    <label for="Status">Status of the Incident:</label> 
+    <select name="Status" id="Status"> 
+        <option value="Open">Open</option> 
+        <option value="In Progress">In Progress</option> 
+        <option value="Closed">Closed</option>  
+    </select></br>
+
+    <button ondblclick="myalert()"> 
+		Submit
+	</button> 
+	  
+	<script> 
+		function myalert() { 
+			alert("Thank you for filing your incidence report\n " + 
+				"We will get back to you shortly");
+
+			window.location.href = "index.html"
+			
+		} 
+		
+	</script>
+
+    
+
+    </div>
+</body>
+</html>
