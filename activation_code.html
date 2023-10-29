@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activation Code</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+ 
+        #activation-code {
+            background-color: #f7f7f7;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- Activation Code Section -->
+    <section id="activation-code" class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- <h2>Activation Code</h2> -->
+                <form id="activationCodeForm">
+                    <div class="form-group">
+                        <div class="input"
+	                        <form method="post" action="">
+	                            <label>First Name:</label><br>
+	                            <input type="text" name="firstname" required/><br>
+	                            <label>Last Name:</label><br>
+	                            <input type="text" name="lastname" required/><br>
+	                            <label> Email:</label><br>
+	                            <input type="email" placeholder="Enter your email" required></br>
+	                            <label>Confirm Email:</label><br>
+	                            <input type="text" name="username" required/><br>
+	                            <label>Password:</label><br>
+	                            <input type="password" name="password" required /><br>
+	                            <!-- <input type="submit" value="Register" class="btn"/> -->
+                            </form>
+                        </div>
+
+                        <button ondblclick="myalert()"> 
+                            Register
+                        </button> 
+                          
+                        <script> 
+                            function myalert() { 
+                                alert("You have registered successfully\n " + 
+                                    "Check your email for your verification code");
+                    
+                                // window.location.href = "index.html"  
+                            } 
+                            
+                        </script>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Activation Code</button>
+                </form>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+
+        $(document).ready(function() {
+            $('#activationCodeForm').submit(function(e) {
+                e.preventDefault();
+                var email = $('#email').val();
+                var check_email = '[a-zA-Z0-9]{0,}([.]?[a-zA-Z0-9]{1,})[@](gmail.com|hotmail.com|yahoo.com)';
+                var patt = new RegExp(check_email);
+                var result = patt.test(email);
+                if (!result) {
+                    alert('Invalid email. Please enter a valid email address.');
+                } else {
+                    alert('Activation code sent to ' + email);
+                    
+                }
+            });
+        });
+    </script>
+</body>
+</html>
