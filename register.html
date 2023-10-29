@@ -6,19 +6,36 @@
 <div class="input"
 	<form method="post" action="">
 	<label>First Name:</label><br>
-	<input type="text" name="username" required/><br>
+	<input type="text" name="firstname" required/><br>
 	<label>Last Name:</label><br>
-	<input type="text" name="username" required/><br>
+	<input type="text" name="lastname" required/><br>
 	<label> Email:</label><br>
-	<input type="text" name="username" required/><br>
+	<input type="text" name="email" required/><br>
 	<label>Confirm Email:</label><br>
-	<input type="text" name="username" required/><br>
+	<input type="text" name="email" required/><br>
 	<label>Password:</label><br>
 	<input type="password" name="password" required /><br>
-	<input type="submit" value="Register" class="btn"/>
+	<!-- <input type="submit" value="Register" class="btn"/> -->
 
 	</form>
-You have an account? Click <a href="./login.html">here</a> to Login.
+
+	<button ondblclick="myalert()"> 
+		Register
+	</button> 
+	  
+	<script> 
+		function myalert() { 
+			alert("You have registered successfully\n " + 
+				"Check your email for your verification code");
+
+			window.location.href = "index.html"
+			
+		} 
+		
+	</script>
+
+
+You have an account? Click <a href="./login.html" target="_blank">here</a> to Login.
 </div>
 </body>
 </html>
